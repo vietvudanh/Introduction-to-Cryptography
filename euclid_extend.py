@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# coding=utf-8	
+# coding=utf-8    
 
 """Euclid extend algorithms
 Usage: euclid_extend a, b for calculating b^-z (mod a)
@@ -26,16 +26,16 @@ y2 = 0
 y1 = 1
 
 while( b > 0):
-	q = math.floor( a / b)
-	r = a % b
-	x = x2 - q * x1
-	y = y2 - q * y1
-	a = b
-	b = r
-	x2 = x1
-	x1 = x
-	y2 = y1
-	y1 = y
+    q = math.floor( a / b)
+    r = a % b
+    x = x2 - q * x1
+    y = y2 - q * y1
+    a = b
+    b = r
+    x2 = x1
+    x1 = x
+    y2 = y1
+    y1 = y
 
 d = a
 x = x2

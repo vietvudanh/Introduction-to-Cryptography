@@ -18,24 +18,24 @@ number_source = []
 char_source = []
 
 for i in range(len(source)):
-	if(source[i] == ' '):
-		number_source.append(-1)
-		continue
-	number_source.append(lower.index(source[i]))
+    if(source[i] == ' '):
+        number_source.append(-1)
+        continue
+    number_source.append(lower.index(source[i]))
 
 i = 0
 
 while( i < len(number_source)):
-	for j in range(len(keyword)):
-		if( i == len(number_source)):
-			break
-		if(number_source[i] == -1):
-			char_source.append(" ")
-			i += 1
-			continue
-		number_source[i] = (number_source[i] + lower.index(keyword[j]) ) % len(lower)
-		char_source.append( lower[number_source[i]] )
-		i += 1
+    for j in range(len(keyword)):
+        if( i == len(number_source)):
+            break
+        if(number_source[i] == -1):
+            char_source.append(" ")
+            i += 1
+            continue
+        number_source[i] = (number_source[i] + lower.index(keyword[j]) ) % len(lower)
+        char_source.append( lower[number_source[i]] )
+        i += 1
 
 print 'Source:', _source
 print 'keyword', _keyword

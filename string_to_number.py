@@ -11,13 +11,13 @@ import string
 import sys
 
 def string_to_number(msg):
-	"""convert string to number"""
-	_lower = string.ascii_lowercase
-	_number = 0
-	for i in msg:
-		_number += _lower.index(i) * ( 26** (len(msg) - msg.index(i) - 1 ) )
-	return _number
+    """convert string to number"""
+    _lower = string.ascii_lowercase
+    _number = 0
+    for i in msg:
+        _number += _lower.index(i) * ( 26** (len(msg) - msg.index(i) - 1 ) )
+    return _number
 
 if __name__ == '__main__':
-	msg = sys.argv[1]
-	print string_to_number(msg)
+    msg = sys.argv[1]
+    print string_to_number(msg)

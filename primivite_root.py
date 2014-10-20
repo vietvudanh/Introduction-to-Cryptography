@@ -10,16 +10,16 @@ import sys
 __author__ = 'Viet Vu Danh'
 __email__ = 'vietvudanh@gmail.com'
 
-n = int(sys.argv[1])	# n is prime
-_n = n-1				# so phi(n) is n-1
+n = int(sys.argv[1])    # n is prime
+_n = n-1                # so phi(n) is n-1
 
 def primeFactors(n):
-	"""Find prime factors of n
-	Params: prime n
+    """Find prime factors of n
+    Params: prime n
 
-	Return: list of factors
+    Return: list of factors
 
-	"""
+    """
     factors = []
     for i in range(2, n + 1):
         while n % i == 0:
@@ -29,22 +29,21 @@ def primeFactors(n):
 
 if __name__ == '__main__':
 
-	print range(n)
-	# find prime factors
-	factors = primeFactors(_n)
-	for i in range(len(factors)):
-		factors[i] = n / factors[i]
+    print range(n)
+    # find prime factors
+    factors = primeFactors(_n)
+    for i in range(len(factors)):
+        factors[i] = n / factors[i]
 
-	# perform test on prime number
-	root = [2,3,5,6,7,11,13,17]
+    # perform test on prime number
+    root = [2,3,5,6,7,11,13,17]
 
-	for r in root:
-		count = 0
-		for f in factors:
-			l = pow(r, f,n)
-			if( l != 1):
-				# print '%s^%s == %s mod %s' %(r, f, l, n)
-				count += 1
-		if(count == len(factors)):
-			print r, 'is OK'
-			break
+    for r in root:
+        count = 0
+        for f in factors:
+            l = pow(r, f,n)
+            if( l != 1):
+                count += 1
+        if(count == len(factors)):
+            print r, 'is OK'
+            break
