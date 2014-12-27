@@ -11,6 +11,14 @@ __author__ = 'Vu Danh Viet'
 __email__ = 'vietvudanh@gmail.com'
 __description__ = 'Euclid extend algorithms script'
 
+def gcd(a, b):
+    if(a == b):
+        return a
+    if( a > b):
+        return gcd(a-b, b)
+    if( a < b):
+        return gcd(a, b -a)
+
 # a, b, d, r, q
 # x, y, x1, x2, y1, y2
 
@@ -18,6 +26,12 @@ _a = int(sys.argv[1])
 _b = int(sys.argv[2])
 a = _a
 b = _b
+
+tmp = gcd(a, b)
+
+if tmp != 1:
+    print '%s and %s have common divisor: %s' % (_a, _b, tmp)
+    sys.exit(0)
 
 # initialize
 x2 = 1
