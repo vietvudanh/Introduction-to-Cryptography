@@ -4,9 +4,6 @@
 # coding=utf-8
 import string
 
-__author__ = 'Viet Vu Danh'
-__email__ = 'vietvudanh@gmail.com'
-
 _source = "this is just a random text"
 source = list(_source)
 _keyword = "vietvudanh"
